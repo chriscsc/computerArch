@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>COMP 4611 Homework 3</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<STYLE>H1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 16pt; MARGIN-LEFT: 0in; COLOR: black; MARGIN-RIGHT: 0in; FONT-FAMILY: PMingLiU
+}
+SPAN.MsoHyperlink {
+	COLOR: #996600; FONT-FAMILY: "Comic Sans MS"; TEXT-DECORATION: underline; text-underline: single
+}
+TABLE.a {
+	FONT-SIZE: 10pt; FONT-FAMILY: "Times New Roman"; mso-style-parent: ""
+}
+TABLE.MsoTableWeb3 {
+	BORDER-RIGHT: 3pt outset; BORDER-TOP: 3pt outset; FONT-SIZE: 10pt; BORDER-LEFT: 3pt outset; BORDER-BOTTOM: 3pt outset; FONT-FAMILY: "Times New Roman"
+}
+SPAN.MsoHyperlinkFollowed {
+	COLOR: #999966; TEXT-DECORATION: underline; text-underline: single
+}
+H3 {
+	FONT-WEIGHT: bold; FONT-SIZE: 13.5pt; MARGIN-LEFT: 0in; MARGIN-RIGHT: 0in; FONT-FAMILY: "Times New Roman"
+}
+LI.MsoNormal {
+	FONT-SIZE: 12pt; MARGIN: 0in 0in 0pt; FONT-FAMILY: "Times New Roman"; mso-style-parent: ""
+}
+SPAN.style1 {
+}
+H4 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14pt; MARGIN: 12pt 0in 3pt; FONT-FAMILY: "Times New Roman"
+}
+SPAN.style81 {
+	
+}
+SPAN.grame {
+	
+}
+SPAN.spelle {
+	
+}
+</STYLE>
+
+<META content="MSHTML 6.00.6000.16640" name=GENERATOR></HEAD>
+<BODY background="https://course.cse.ust.hk/comp4611/hw/comp318proj_files/modbkgnd.bmp">
+<P class=MsoNormal style="TEXT-ALIGN: center" align=center><B><SPAN lang=FR 
+style="FONT-SIZE: 18pt; COLOR: #cc6600">COMP4611 Homework 3: Cache Probing</SPAN></B></P>
+<P class=MsoNormal style="TEXT-ALIGN: center" align=center><B><SPAN lang=FR 
+style="FONT-SIZE: 18pt; COLOR: #cc6600">&nbsp;</SPAN><SPAN lang=FR 
+style="FONT-SIZE: 18pt; COLOR: red">Due &nbsp;&nbsp; Nov. 19, 2012
+(11:00am)</SPAN></B></P>
+<hr/>
+<font color="#175016">
+<h2>Hints</h2>
+We can use a program to probe the size of the cache, i.e., cache size inference, on a real computer.
+Knowing that cache configuration has an impact on memory access performance, we can write a program to probe the characteristics of the cache system by deliberately accessing memory in specific patterns to expose some aspects of the memory access performance.
+</p>
+<p>
+As one possibility, we can write a program to sweep across a memory area for multiple times.
+If the memory area is small (e.g., 8KB), most of the memory accesses hit the cache.
+On the other hand, if the memory area is large (e.g., 256MB), many memory accesses have cache misses.
+Hence, by measuring the memory access time to memory areas of different sizes, we will be able to find out how large the size of the cache is.
+</p>
+<p>
+As a first attempt, we may construct a program like csweep.c (included in the <a href="seecache.tgz">tar ball</a>).
+In csweep.c, the core part is a memory access loop as follows:<br/>
+
+&nbsp;  while (low < high) {<br/>
+&nbsp;&nbsp;&nbsp;    i64a += memory[low];<br/>
+&nbsp;&nbsp;&nbsp;    low++;<br/>
+&nbsp;  }<br/>
+The memory sweep logic in csweep.c runs the above loop multiple times and calculate the avearge memory access time.
+We use processor's ticks counter as an approximate measurement of time. 
+Recent Intel processors support this instruction -- it increments its ticks counter every clock cycle and resets 
+its value to 0 whenever the processor is reset. The assembly instruction &quot;rdtsc&quot; 
+is able to read the processor's current ticks counter into the EDX:EAX 
+registers.</p>
+<p>
+Reading csweep.c, you will find the program measures the average memory access time when sweeping through memory areas from 8K to 256M.
+Will this simple program work?
+You can use a plotting tool, such as MS Excel, to visualize how the memory access time changes, and form your conclusion based on the result you observe and your knowledge on cache design.
+</p>
+<p>
+You can also exercise more sophisticated control how how we access the memory, and use some assembly code to control how registers and memory references are accessed.
+We have provided such a program asmstride.c (included in the <a href="seecache.tgz">tar ball</a>).
+In asmstride.c, some useful functions have been written to help you, but the main() function is not complete, yet.
+You can simply finish the code in the &quot;main&quot; function to probe the cache size. 
+Tutorial 9 will help you understand this program.
+Of course, you can also write your own program from scratch for this measurement and inference and it will be fun!
+</p>
+</font>
+</BODY></HTML>
+
