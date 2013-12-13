@@ -1,0 +1,152 @@
+SPEC 129.compress harness
+Initial File Size:75000	Start character:y
+The starting size is: 75002
+The compressed size is: 43826
+The compressed/uncompressed size is: 75002
+Files both have length 75002
+First character (o) and Last Character (
+) match. 
+The starting size is: 75005
+The compressed size is: 43830
+The compressed/uncompressed size is: 75005
+Files both have length 75005
+First character (o) and Last Character (
+) match. 
+The starting size is: 75009
+The compressed size is: 43833
+The compressed/uncompressed size is: 75009
+Files both have length 75009
+First character (o) and Last Character (
+) match. 
+The starting size is: 75014
+The compressed size is: 43837
+The compressed/uncompressed size is: 75014
+Files both have length 75014
+First character (o) and Last Character (
+) match. 
+The starting size is: 75020
+The compressed size is: 43841
+The compressed/uncompressed size is: 75020
+Files both have length 75020
+First character (o) and Last Character (
+) match. 
+The starting size is: 75027
+The compressed size is: 43845
+The compressed/uncompressed size is: 75027
+Files both have length 75027
+First character (o) and Last Character (
+) match. 
+The starting size is: 75035
+The compressed size is: 43848
+The compressed/uncompressed size is: 75035
+Files both have length 75035
+First character (o) and Last Character (
+) match. 
+The starting size is: 75044
+The compressed size is: 43852
+The compressed/uncompressed size is: 75044
+Files both have length 75044
+First character (o) and Last Character (
+) match. 
+The starting size is: 75054
+The compressed size is: 43856
+The compressed/uncompressed size is: 75054
+Files both have length 75054
+First character (o) and Last Character (
+) match. 
+The starting size is: 75065
+The compressed size is: 43860
+The compressed/uncompressed size is: 75065
+Files both have length 75065
+First character (o) and Last Character (
+) match. 
+The starting size is: 75077
+The compressed size is: 43863
+The compressed/uncompressed size is: 75077
+Files both have length 75077
+First character (o) and Last Character (
+) match. 
+The starting size is: 75090
+The compressed size is: 43867
+The compressed/uncompressed size is: 75090
+Files both have length 75090
+First character (o) and Last Character (
+) match. 
+The starting size is: 75104
+The compressed size is: 43871
+The compressed/uncompressed size is: 75104
+Files both have length 75104
+First character (o) and Last Character (
+) match. 
+The starting size is: 75119
+The compressed size is: 43875
+The compressed/uncompressed size is: 75119
+Files both have length 75119
+First character (o) and Last Character (
+) match. 
+The starting size is: 75135
+The compressed size is: 43878
+The compressed/uncompressed size is: 75135
+Files both have length 75135
+First character (o) and Last Character (
+) match. 
+The starting size is: 75152
+The compressed size is: 43882
+The compressed/uncompressed size is: 75152
+Files both have length 75152
+First character (o) and Last Character (
+) match. 
+The starting size is: 75170
+The compressed size is: 43886
+The compressed/uncompressed size is: 75170
+Files both have length 75170
+First character (o) and Last Character (
+) match. 
+The starting size is: 75189
+The compressed size is: 43890
+The compressed/uncompressed size is: 75189
+Files both have length 75189
+First character (o) and Last Character (
+) match. 
+The starting size is: 75209
+The compressed size is: 43893
+The compressed/uncompressed size is: 75209
+Files both have length 75209
+First character (o) and Last Character (
+) match. 
+The starting size is: 75230
+The compressed size is: 43897
+The compressed/uncompressed size is: 75230
+Files both have length 75230
+First character (o) and Last Character (
+) match. 
+The starting size is: 75252
+The compressed size is: 43901
+The compressed/uncompressed size is: 75252
+Files both have length 75252
+First character (o) and Last Character (
+) match. 
+The starting size is: 75275
+The compressed size is: 43905
+The compressed/uncompressed size is: 75275
+Files both have length 75275
+First character (o) and Last Character (
+) match. 
+The starting size is: 75299
+The compressed size is: 43908
+The compressed/uncompressed size is: 75299
+Files both have length 75299
+First character (o) and Last Character (
+) match. 
+The starting size is: 75324
+The compressed size is: 43912
+The compressed/uncompressed size is: 75324
+Files both have length 75324
+First character (o) and Last Character (
+) match. 
+The starting size is: 75350
+The compressed size is: 43916
+The compressed/uncompressed size is: 75350
+Files both have length 75350
+First character (o) and Last Character (
+) match. 

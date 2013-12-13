@@ -58,45 +58,71 @@ style="FONT-SIZE: 18pt; COLOR: #cc6600">Project on the dynamic branch
 prediction</SPAN></B></P>
 <P class=MsoNormal style="TEXT-ALIGN: center" align=center><B><SPAN lang=FR
 style="FONT-SIZE: 18pt; COLOR: #cc6600">&nbsp;</SPAN><SPAN lang=FR
-style="FONT-SIZE: 18pt; COLOR: red">Due date&nbsp;:&nbsp; <del>Nov 30</del> Dec. 5, 2012
+style="FONT-SIZE: 18pt; COLOR: red">Due date&nbsp;:&nbsp; Nov <del>25th</del> 27th, 2013
 (11:00 pm)</SPAN></B></P>
+
+<H2>Annoucements</H2>
+<ul> 
+<li>2-11-2013:<a href="http://baijia.info/forumdisplay.php?fid=223">Project FAQ</a></li> 
+<li>6-11-2013:<a href="comp4611_grouplist.htm">Project Group List (updated on: 2013-11-8)</a></li>
+</ul>
+
 <H2>1. Introduction</H2>
 <P>In this project, you will study the dynamic branch prediction on SimpleScalar.
 The project consists of three tasks, as listed below:
 <UL style="MARGIN-BOTTOM: 0in" type=disc>
   <LI class=MsoNormal><SPAN lang=FR>
 In the first task, you will experiment with a built-in 2-bit branch predictor on SimpleScalar 
-and use the Go benchmark program to evaluate its prediction accuracy.
+and use the <b>compress</b> benchmark program to evaluate its prediction accuracy.
 </li>
 <li>
-In the second task, you will implement a 3-bit branch predictor on SimpleScalar and evaluate its prediction accuracy.
+In the second task, you will implement a 3-bit branch predictor on SimpleScalar and evaluate its prediction accuracy using the <b>compress</b> benchmark.
 </li>
 <li>
 In the third task, you will design and implement your own branch predictor on SimpleScalar and try to 
-beat the built-in predictors in terms of prediction accuracy.
+beat the built-in predictors in terms of prediction accuracy using the <b>compress</b> benchmark.
 </li>
 </UL>
 <P>
 Each group should&nbsp;submit&nbsp;<STRONG>ONE</STRONG> set of&nbsp;code and
 report&nbsp;with names of all group members. </P>
 <h2>2. Project detail</h2>
-<P>Please read the slides of Tutorial 9 carefully for the detailed description and requirement of each task. 
+<P>Please read the slides of Tutorial 7 carefully for the detailed description and requirement of each task. 
+</P>
+<P>You can download the <b>compress</b> benchmark binary (PISA little endian) <A 
+href="project/benchmarks.tar.gz">here (updated on 29, Oct 2013)</A>.</br>
+To uncompress the tar ball, you can use command "tar xvfz
+benchmarks.tar.gz" on your Cygwin.</br>
+<br/>
+Sample simulation statistics (2-bit (bimodal) branch prediction with table size of 512):<br>
+(Check to see that you obtain the same simulation statistics, in particular, sim_num_insn and sim_num_branches)
+<ul>
+<li> <a href="project/compress-2bit-512.simout.txt">SimpleScalar on Cygwin (compress-2bit-512.simout)</a></li>
+<li> <a href="project/compress-2bit-512.simout_linux.txt">SimpleScalar on Linux (compress-2bit-512.simout)</a></li>
+</ul>
+Sample program output of compress benchmark:
+<br>
+(Check to see that you obtain the same program output)
+<ul>
+<li> <a href="project/compress-2bit-512.progout.txt">compress-2bit-512.progout</a></li>
+</ul>
+For more details on the running SimpleScalar branch prediction with the compress benchmark, please see <a href="http://baijia.info/forumdisplay.php?fid=223">Project FAQ</a>
 </P>
 <P>You can download the skeleton code <A 
-href="comp4611_project.tar.gz">here</A>.
+href="project/comp4611_proj.tar.gz">comp4611_proj.tar.gz</A>.
 To uncompress the tar ball, you can use command "tar xvfz
-comp4611_project.tar.gz" on your Cygwin.
+comp4611_proj.tar.gz" on your Cygwin.
 </P>
 <h2>3. Grading</SPAN></h2>
 <ul>
 <li>
-Evaluation of 2-bit predictor (20%)
+Evaluation of the built-in 2-bit predictor (20%)
 </li>
 <li>
-Implementation and evaluation 3-bit predictor (40%)
+Implementation and evaluation of the 3-bit predictor (30%)
 </li>
 <li>
-Design, implmentation, evaluation of your own predictor (30%)
+Design, implmentation, evaluation of your own predictor (40%)
 </li>
 <li>
 Quality of project report (10%).
@@ -108,11 +134,11 @@ explicitly in your report. Otherwise, it&nbsp;may be considered as
 cheating.<BR>
 
 <H2>4. Submission</SPAN></H2>
-<p>Please create a directory "<STRONG>comp4611_project_groupID</STRONG>" to save the code and report files. 
-In specific, please save your code file for 3-bit predictor "<STRONG>bpred.c</STRONG>" under the sub-directory “<STRONG>comp4611_project_groupID/3bit/</STRONG>”, 
-save the code files for your own predictor, including <STRONG>bpred.h</STRONG>, <STRONG>bpred.c</STRONG>, <STRONG>sim-bpred.c</STRONG>, <STRONG>readme</STRONG> and other relevant files, under the sub-directory “<STRONG>comp4611_project_groupID/own/</STRONG>”, 
-save the report file  as "<STRONG>report.doc</STRONG>" under the  directory "comp4611_project_groupID/", 
-then package the directory "comp4611_project_groupID" in one zip file, name it as “<STRONG>comp4611_project_groupID.zip</STRONG>”, and submit it 
+<p>Please create a directory "<STRONG>comp4611_proj_groupID</STRONG>" to save the code and report files. 
+In specific, please save your code file for 3-bit predictor "<STRONG>bpred.c</STRONG>" under the sub-directory “<STRONG>comp4611_proj_groupID/3bit/</STRONG>”, 
+save the code files for your own predictor, including <STRONG>bpred.h</STRONG>, <STRONG>bpred.c</STRONG>, <STRONG>sim-bpred.c</STRONG>, <STRONG>readme</STRONG> and other relevant files, under the sub-directory “<STRONG>comp4611_proj_groupID/own/</STRONG>”, 
+save the report file  as "<STRONG>report.doc</STRONG>" under the  directory "comp4611_proj_groupID/", 
+then package the directory "comp4611_proj_groupID" in one zip file, name it as “<STRONG>comp4611_proj_groupID.zip</STRONG>”, and submit it 
 to <STRONG>CASS</STRONG> (<A
 style="COLOR: blue; TEXT-DECORATION: underline; text-underline: single"
 href="https://course.cs.ust.hk/cass"
@@ -134,8 +160,9 @@ missing, the project will not be graded and no points will be given.
 </P>
 
 <h2>5. Questions and contacts</h2>
-<P>If you have any questions, please send your enquires to <STRONG>khongaa@ust.hk</STRONG>.
+<P>If you have any questions, please send your enquires to <img src="project/mail.jpg" height=18/>.
 A tutorial session will be dedicated to the project.
 You are welcomed to the instructors' and TAs' office hours for questions.
-</P>
+</br>
+Frequently asked questions will be posted on the course forum <a href="http://baijia.info/forumdisplay.php?fid=223">Project FAQ</a>.</P>
 <P>&nbsp;</P></BODY></HTML>
